@@ -41,6 +41,45 @@ This project is licensed under the ${license} license. Click [here](${renderLice
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+  ${renderLicenseBadge(data.license)}
+
+## Description
+
+${data.description}
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+
+## Installation
+
+${data.installation}
+
+## Usage
+
+${data.usage}
+
+${renderLicenseSection(data.license)}
+
+## Contributing
+
+${data.contribution}
+
+## Tests
+
+${data.testsRequired === 'Yes' ? data.testingSteps : 'Tests are not required for this project.'}
+
+## Questions
+
+If you have any questions, please contact me:
+
+- GitHub: [${data.username}](https://github.com/${data.username})
+- Email: [${data.email}](mailto:${data.email})
 
 `;
 }
