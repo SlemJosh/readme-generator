@@ -8,10 +8,9 @@ const generateMarkdown = require('./utils/generateMarkdown'); // custom module t
 
 
 // TODO: Create an array of questions for user input
-const questions = [];
+const questions = [
 
 // title
-
 {
     type: 'input',
     name: 'title',
@@ -19,7 +18,6 @@ const questions = [];
 }
 
 // description
-
 {
     type: 'input',
     name: 'description',
@@ -28,7 +26,6 @@ const questions = [];
 
 
 // installation
-
 {
     type: 'input',
     name: 'installation',
@@ -36,7 +33,6 @@ const questions = [];
 }
 
 // usage
-
 {
     type: 'input',
     name: 'usage',
@@ -44,7 +40,6 @@ const questions = [];
 }
 
 // license
-
 {
     type: 'list',
     name: 'license',
@@ -53,14 +48,13 @@ const questions = [];
 }
 
 // contributing
-
 {
     type: 'input',
     name: 'contribution',
     message: 'List your collaborators or any sources that helped you create this project.',
 }
-// test
 
+// test
 {
     type: 'input',
     name: 'tests',
@@ -68,23 +62,23 @@ const questions = [];
 }
 
 // questions
-
 {
     type: 'input',
     name: 'username',
     message: 'What is your github username?',
 }
+
 {
     type: 'input',
     name: 'email',
     message: 'What is your email?',
 }
-
+];
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
 function init() {}
 
-// Function call to initialize app
+Function call to initialize app
 init();
