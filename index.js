@@ -97,21 +97,6 @@ const questions = [
     }
 ];
 
-// function testQuestions() {
-//     inquirer
-//         .prompt(questions)
-//         .then((answers) => {
-//             console.log('User Responses:');
-//             console.log(answers);
-//         })
-//         .catch((error) => {
-//             console.error('Error:', error);
-//         });
-// }
-
-// Call the testing function
-// testQuestions();
-
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     const filename = './README.md';
@@ -123,8 +108,12 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-inquirer.prompt(questions)
-.then (answers => writeToFile(generateMarkdown(answers)))
-}
+    inquirer
+      .prompt(questions)
+      .then((answers) => {
+        const readmeContent = generateMarkdown(answers);
+        writeToFile('README.md', readmeContent);
+      });
+  }
 // Function call to initialize app
 init();
