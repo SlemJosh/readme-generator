@@ -1,14 +1,13 @@
-// TODO: Include packages needed for this application
 // Packages that need to be installed/imported
 const inquirer = require('inquirer');  // inquirer allows user to interact with command-line interface.
 const fs = require('fs'); // file system provides functions for that interacting
 
-// Package that we provide
+// This package is provided and we don't need to import it.
 const generateMarkdown = require('./utils/generateMarkdown'); // custom module that helps us create and format the document to our liking.
 
 
-// TODO: Create an array of questions for user input
 const questions = [
+    // title/name of project
     {
         type: 'input',
         name: 'title',
@@ -17,6 +16,7 @@ const questions = [
             return input !== '' ? true : 'Title cannot be left empty.';
         }
     },
+    // project description
     {
         type: 'input',
         name: 'description',
@@ -25,6 +25,7 @@ const questions = [
             return input !== '' ? true : 'Description cannot be left empty.';
         }
     },
+    // steps for installing the project
     {
         type: 'input',
         name: 'installation',
@@ -33,6 +34,7 @@ const questions = [
             return input !== '' ? true : 'Installation steps cannot be empty. You may type N/A if not applicable';
         }
     },
+    // how to use the project steps
     {
         type: 'input',
         name: 'usage',
@@ -41,12 +43,14 @@ const questions = [
             return input !== '' ? true : 'Usage steps cannot be empty. You may type N/A if not applicable';
         }
     },
+    // license
     {
         type: 'list',
         name: 'license',
         message: 'What type of license does your project use?',
         choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'Other', 'None']
     },
+    // license not specified in previous question
     {
         type: 'input',
         name: 'customLicense',
@@ -56,6 +60,7 @@ const questions = [
             return input !== '' ? true : 'Custom license cannot be empty. You may type N/A if not applicable';
         }
     },
+    // contributors and resources cited
     {
         type: 'input',
         name: 'contribution',
@@ -64,12 +69,14 @@ const questions = [
             return input !== '' ? true : 'Contributors/source list cannot be empty. You may type N/A if not applicable';
         }
     },
+    // Tests Required (Still not sure what this is for)
     {
         type: 'list',
         name: 'testsRequired',
         message: 'Is there a test needed for this project?',
         choices: ['Yes', 'No']
     },
+    // If they answer Yes to the previous, here is where they can display those steps.
     {
         type: 'input',
         name: 'testingSteps',
@@ -79,6 +86,7 @@ const questions = [
             return input !== '' ? true : 'Tests required cannot be empty. You may type N/A if not applicable';
         }
     },
+    // github username
     {
         type: 'input',
         name: 'username',
@@ -87,6 +95,7 @@ const questions = [
             return input !== '' ? true : 'Username cannot be empty. You may type N/A if not applicable';
         }
     },
+    // email
     {
         type: 'input',
         name: 'email',
@@ -97,7 +106,7 @@ const questions = [
     }
 ];
 
-// TODO: Create a function to write README file
+// Function to write the file to a location designated.
 function writeToFile(fileName, data) {
     const filename = './assets/README.md';
 
@@ -106,7 +115,7 @@ function writeToFile(fileName, data) {
     });
 }
 
-// TODO: Create a function to initialize app
+// Function to start the questions and answers. 
 function init() {
     inquirer
       .prompt(questions)
