@@ -1,9 +1,9 @@
-# mhello
+# Josh
   ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Description
 
-hello
+Libby
 
 ## Table of Contents
 
@@ -16,11 +16,11 @@ hello
 
 ## Installation
 
-hello
+Penny
 
 ## Usage
 
-hello
+Josh
 
 ## License
 
@@ -28,16 +28,16 @@ This project is licensed under the MIT license. Click [here]([MIT License](https
 
 ## Contributing
 
-hello
+Libby
 
 ## Tests
 
-hello
+Penny
 
 ## Questions
 
 If you have any questions, please contact me:
 
-- GitHub: [hello](https://github.com/hello)
-- Email: [hello](mailto:hello)
+- GitHub: [Josh](https://github.com/Josh)
+- Email: [Libby](mailto:Libby)
 

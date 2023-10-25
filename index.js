@@ -34,6 +34,8 @@ const questions = [
             return input !== '' ? true : 'Installation steps cannot be empty. You may type N/A if not applicable';
         }
     },
+
+    
     // how to use the project steps
     {
         type: 'input',
@@ -108,9 +110,9 @@ const questions = [
 
 // Function to write the file to a location designated.
 function writeToFile(fileName, data) {
-    const filename = './assets/README.md';
+    const filename = './created/README.md';
 
-    fs.writeFile('./assets/README.md', data, function (err){
+    fs.writeFile('./created/README.md', data, function (err){
         err ? console.log(err) : console.log(filename + ' created!')
     });
 }
@@ -121,7 +123,7 @@ function init() {
       .prompt(questions)
       .then((answers) => {
         const readmeContent = generateMarkdown(answers);
-        writeToFile('./assets/README.md', readmeContent);
+        writeToFile('./created/README.md', readmeContent);
       });
   }
 // Function call to initialize app

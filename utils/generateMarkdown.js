@@ -1,5 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// Function to display badge for license if available.
 function renderLicenseBadge(license) {
   if (license === 'MIT') {
     return '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)';
@@ -12,8 +11,7 @@ function renderLicenseBadge(license) {
 }
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// Function to display link for license if available.
 function renderLicenseLink(license) {
   if (license === 'MIT') {
     return '[MIT License](https://opensource.org/licenses/MIT)';
@@ -26,8 +24,7 @@ function renderLicenseLink(license) {
 }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// Function to format the display for the license section.
 function renderLicenseSection(license) {
   if (license) {
     return `## License
@@ -38,7 +35,8 @@ This project is licensed under the ${license} license. Click [here](${renderLice
 }
 }
 
-// TODO: Create a function to generate markdown for README
+// Function to display the readme in a format we decide.   The Table of contents will list the information we get during the questions sections, 
+// and it will also act as links to navigate directly to that section of the README
 function generateMarkdown(data) {
   return `# ${data.title}
   ${renderLicenseBadge(data.license)}
@@ -79,9 +77,7 @@ ${data.testsRequired === 'Yes' ? data.testingSteps : 'Tests are not required for
 If you have any questions, please contact me:
 
 - GitHub: [${data.username}](https://github.com/${data.username})
-- Email: [${data.email}](mailto:${data.email})
-
-`;
+- Email: [${data.email}](mailto:${data.email})`;
 }
 
 module.exports = generateMarkdown;
