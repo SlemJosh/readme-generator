@@ -47,39 +47,6 @@ const questions = [
         }
     },
 
-    // Screenshots ? Since we add them in most of ours, this way we can ask if they have some, and also the pathing to display them.
-    {
-        type: 'confirm',
-        name: 'hasScreenshots',
-        message: 'Do you have screenshots to include in the installation section?',
-        default: false,
-    },
-
-    // If they answer yes to the following, we give them another question and answer where they can choose the pathing to the image.
-    {
-        type: 'input',
-        name: 'screenshotPaths',
-        message: 'Enter the file paths to your screenshot(s). Seperate the pathing with a comment for each additional screenshot',
-        when: (answers) => answers.hasScreenshots,
-        validate: function (input) {
-            if (input.trim() === '') {
-                return 'Screenshot paths cannot be empty. Type N/A if not applicable';
-            }
-    
-            // Split the comma-separated paths into an array
-            const paths = input.split(',').map(path => path.trim());
-    
-            // Check if all file paths exist
-            const invalidPaths = paths.filter(path => !fs.existsSync(path));
-            
-            if (invalidPaths.length > 0) {
-                return `The following paths do not exist: ${invalidPaths.join(', ')}`;
-            }
-    
-            return true;
-        },
-    },
-
     // license
     {
         type: 'list',
