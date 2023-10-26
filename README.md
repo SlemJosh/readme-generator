@@ -11,7 +11,7 @@ problematic, and in the long run probably not worth it.  The whole idea of this 
 To use you will need node, and the npm's inquierer, and fs.  These can be installed with an npm i.
 
 ## Usage
-![README.md generated example screenshot](assets/readme.png)
+![README generated example screenshot](/assets/readmescreenshot.png)
 To use for yourself.  Simply navigate your terminal to the same directory as the index.js file. And type in node index.js
 
 
