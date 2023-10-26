@@ -8,7 +8,12 @@ To use it, you will need Node.js and the npm packages Inquirer and fs. You can i
 
 ## Usage
 ![README generated example screenshot](/assets/readmescreenshot.png)
+
+---
+
 [Video link of demonstration](https://drive.google.com/file/d/12-ETAxf3iC0tRrKXl-ECkXMi5L0OEb7p/view)
+
+---
 To use it for yourself, simply navigate your terminal to the same directory as the index.js file and type "node index.js".
 
 
