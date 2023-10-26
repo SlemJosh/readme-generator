@@ -33,7 +33,7 @@ const questions = [
         name: 'installation',
         message: 'What are the steps required to install your project? Is there a web address to view this project?',
         validate: function (input) {
-            return input !== '' ? true : 'Installation steps cannot be empty. You may type N/A if not applicable';
+            return input !== '' ? true : 'Installation steps cannot be empty. You may type none or na if not applicable';
         }
     },
 
@@ -43,7 +43,7 @@ const questions = [
         name: 'usage',
         message: 'What are the steps for using the project?',
         validate: function (input) {
-            return input !== '' ? true : 'Usage steps cannot be empty. You may type N/A if not applicable';
+            return input !== '' ? true : 'Usage steps cannot be empty. You may type none or na if not applicable';
         }
     },
 
@@ -62,7 +62,7 @@ const questions = [
         message: 'Please enter the license your project uses.',
         when: (answers) => answers.license === 'Other',
         validate: function (input) {
-            return input !== '' ? true : 'Custom license cannot be empty. You may type N/A if not applicable';
+            return input !== '' ? true : 'Custom license cannot be empty. You may type none or na if not applicable';
         }
     },
 
@@ -72,7 +72,7 @@ const questions = [
         name: 'contribution',
         message: 'List your collaborators or any sources that helped you create this project.',
         validate: function (input) {
-            return input !== '' ? true : 'Contributors/source list cannot be empty. You may type N/A if not applicable';
+            return input !== '' ? true : 'Contributors/source list cannot be empty. You may type none or na if not applicable';
         }
     },
 
@@ -91,7 +91,7 @@ const questions = [
         message: 'Please specify the testing steps:',
         when: (answers) => answers.testsRequired === 'Yes',
         validate: function (input) {
-            return input !== '' ? true : 'Tests required cannot be empty. You may type N/A if not applicable';
+            return input !== '' ? true : 'Tests required cannot be empty. You may type none or na if not applicable';
         }
     },
 
@@ -101,7 +101,7 @@ const questions = [
         name: 'username',
         message: 'What is your github username?',
         validate: function (input) {
-            return input !== '' ? true : 'Username cannot be empty. You may type N/A if not applicable';
+            return input !== '' ? true : 'Username cannot be empty. You may type none or na if not applicable';
         }
     },
 
@@ -111,7 +111,7 @@ const questions = [
         name: 'email',
         message: 'What is your email?',
         validate: function (input) {
-            return input !== '' ? true : 'Email cannot be empty. You may type N/A if not applicable';
+            return input !== '' ? true : 'Email cannot be empty. You may type none or na if not applicable';
         }
     }
 ];
@@ -121,7 +121,11 @@ function writeToFile(fileName, data) {
     const filename = 'README.md';
 
     fs.writeFile('./created/README.md', data, function (err){
-        err ? console.log(err) : console.log(filename + ' created! Check the created folder.')
+        if (err) {
+            console.error('Error writing file:', err);
+        } else {
+            console.log(filename + ' created! Check the created folder.');
+        }
     });
 }
 
