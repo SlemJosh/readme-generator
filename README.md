@@ -7,8 +7,8 @@ This project was about coding and creating a program that would help us to creat
 To use it, you will need Node.js and the npm packages Inquirer and fs. You can install them by opening up your terminal and typing "npm i".
 
 ## Usage
-![README generated example screenshot](/assets/readmescreenshot.png)|
-https://drive.google.com/file/d/12-ETAxf3iC0tRrKXl-ECkXMi5L0OEb7p/view
+![README generated example screenshot](/assets/readmescreenshot.png)
+[Video link of demonstration](https://drive.google.com/file/d/12-ETAxf3iC0tRrKXl-ECkXMi5L0OEb7p/view)
 To use it for yourself, simply navigate your terminal to the same directory as the index.js file and type "node index.js".
 
 
