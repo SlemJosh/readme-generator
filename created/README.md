@@ -1,9 +1,9 @@
-# test
+# Professional README Generator
   ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Description
 
-test
+This is a professional README generator, that will allow you to automatically format and populate the fields for your future README files.
 
 ## Table of Contents
 
@@ -16,11 +16,11 @@ test
 
 ## Installation
 
-test
+You will need node and some dependancies to use this.  The ones we use are inquirer and fs. You can install them simply by typing npm i.
 
 ## Usage
 
-test
+To use the generator. Once you have the dependancies installed.  Simpy type node index.js into your terminal and it will prompt you for the answers to some questions that will be displayed on your readme.
 
 ## License
 
@@ -28,15 +28,15 @@ This project is licensed under the MIT license. Click [here]([MIT License](https
 
 ## Contributing
 
-noe
+Collaborators and Sources cited here.
 
 ## Tests
 
-noe
+Tests are not required for this project.
 
 ## Questions
 
 If you have any questions, please contact me:
 
-- GitHub: [none](https://github.com/none)
-- Email: [none](mailto:none)
+- GitHub: [testname](https://github.com/testname)
+- Email: [testname@test.com](mailto:testname@test.com)
